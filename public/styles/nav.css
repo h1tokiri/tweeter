@@ -1,0 +1,44 @@
+/* style for the nav element */
+nav {
+  height: 120px;
+  width: 100%;
+  background-color: #4056A1;
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1.5em;
+  font-family: 'Bungee', sans-serif;
+  position: relative;
+}
+
+/* style for the <span> inside the nav */
+nav span {
+  font-family: 'Bungee', sans serif;
+  font-size: 2em;
+  position: absolute;
+  bottom: 10px;
+  left: 1.5em;
+}
+
+/* style for the "write a new tweet" section */
+nav .write-new-tweet {
+  text-align: center;
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 1em;
+  cursor: default;
+  position: absolute;
+  right: 1.5em;
+  bottom: 20%;
+}
+
+/* adjust spacing and positioning */
+nav .write-new-tweet p {
+  margin: 0;
+}
+
+nav .write-new-tweet i {
+  font-size: 1.5em;
+  margin-top: 0.2em;
+  color: red;
+}
