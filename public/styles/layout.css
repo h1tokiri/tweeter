@@ -21,6 +21,17 @@ body {
   font-family: 'Source Sans 3', sans-serif
 }
 
+/* style for the main container */
+
+main {
+  width: 90%;
+  margin: 0 auto;
+  background-color: #f4f1ec;
+  padding: 1em;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  border-radius: 8px;
+}
+
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
