@@ -1,44 +1,43 @@
-/* style for the nav element */
+/* Style for the nav container */
 nav {
   height: 120px;
   width: 100%;
   background-color: #4056A1;
   color: #FFFFFF;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  align-items: center; /* Vertically center items */
+  justify-content: space-between; /* Space between "Tweeter" and "Write a new tweet" */
   padding: 0 1.5em;
   font-family: 'Bungee', sans-serif;
-  position: relative;
+  position: relative; /* Ensures proper child alignment */
 }
 
-/* style for the <span> inside the nav */
-nav span {
-  font-family: 'Bungee', sans serif;
+/* Style for the nav title ("Tweeter") */
+.nav-title {
   font-size: 2em;
-  position: absolute;
-  bottom: 10px;
-  left: 1.5em;
+  position: relative; /* No absolute positioning needed */
 }
 
-/* style for the "write a new tweet" section */
-nav .write-new-tweet {
+/* Style for the "Write a new tweet" section */
+.write-new-tweet {
   text-align: center;
   font-family: 'Source Sans 3', sans-serif;
   font-size: 1em;
-  cursor: default;
-  position: absolute;
-  right: 1.5em;
-  bottom: 20%;
+  display: flex; /* Flexbox for vertical alignment */
+  flex-direction: column; /* Stack text and icon vertically */
+  align-items: center; /* Center text and icon horizontally */
+  margin-right: 1.5em; /* Maintain spacing from the right edge */
 }
 
-/* adjust spacing and positioning */
-nav .write-new-tweet p {
+/* Style for the paragraph inside "Write a new tweet" */
+.write-new-tweet p {
   margin: 0;
+  text-align: center;
 }
 
-nav .write-new-tweet i {
+/* Style for the double-arrow icon */
+.write-new-tweet i {
   font-size: 1.5em;
-  margin-top: 0.2em;
+  margin-top: 0.2em; /* Add slight spacing between text and icon */
   color: red;
 }
