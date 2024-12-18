@@ -9,7 +9,10 @@ nav {
   justify-content: space-between; /* Space between "Tweeter" and "Write a new tweet" */
   padding: 0 1.5em;
   font-family: 'Bungee', sans-serif;
-  position: relative; /* Ensures proper child alignment */
+  position: fixed; /* Ensures proper child alignment */
+  top: 0;
+  left: 0;
+  z-index: 1000;
 }
 
 /* Style for the nav title ("Tweeter") */
@@ -40,4 +43,16 @@ nav {
   font-size: 1.5em;
   margin-top: 0.2em; /* Add slight spacing between text and icon */
   color: red;
+}
+
+body {
+  background-color: #008c8c;
+  background-image: url("https://www.transparenttextures.com/patterns/assault.png");
+  background-repeat: repeat;
+  background-size: auto;
+  color: #545149;
+  background-color: cornsilk;
+  font-size: 24px;
+  font-family: 'Source Sans 3', sans-serif;
+  padding-top: 120px;
 }
