@@ -89,3 +89,8 @@
   color: #4d4d4d;
   text-align: right;
 }
+
+/* make the counter text red when invalid */
+.counter.invalid {
+  color: red;
+}
