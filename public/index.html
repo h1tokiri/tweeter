@@ -11,6 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="/styles/header.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
 
     <!-- App CSS -->
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
@@ -46,8 +47,26 @@
 
     <!-- Page-specific (main) content here -->
     <main class="container">
-      <h1>Welcome to Tweeter</h1>
+      <!-- <h1>Welcome to Tweeter</h1>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.</p>
+       -->
+      <!--New Tweet section-->
+      <section class="new-tweet">
+        <h2>Compose Tweet</h2>
+      <form action="/tweets" method="POST">
+        <h3>What are you humming about?</h3>
+        <!--Textara Container-->
+        <div class="textarea-container">
+          <textarea name="text" id="tweet-text"></textarea>
+        </div>
+        <!--Button and counter-->
+        <div class="form-controls">
+          <button type="submit">Tweet</button>
+          <output name="counter" class="counter" for="tweet-text">140</output>
+        </div>
+      </form>
+      </section>
+      
       <h2>Recent Tweets</h2>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.</p>
     </main>

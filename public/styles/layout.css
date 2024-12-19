@@ -18,7 +18,9 @@ body {
   color: #545149;
   background-color: #f4f1ec;
   font-size: 24px;
-  font-family: 'Source Sans 3', sans-serif
+  font-family: 'Source Sans 3', sans-serif;
+  margin: 0;
+  padding-top: 120px;
 }
 
 /* style for the main container */
@@ -26,10 +28,10 @@ body {
 main {
   width: 90%;
   margin: 0 auto;
-  background-color: #f4f1ec;
-  padding: 1em;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  border-radius: 8px;
+  background-color: cornsilk;
+  /* padding: 1em; */
+  /* box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  border-radius: 8px; */
 }
 
 /*

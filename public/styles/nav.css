@@ -5,7 +5,7 @@ nav {
   background-color: #4056A1;
   color: #FFFFFF;
   display: flex;
-  align-items: center; /* Vertically center items */
+  align-items: flex-end; /* Vertically center items */
   justify-content: space-between; /* Space between "Tweeter" and "Write a new tweet" */
   padding: 0 1.5em;
   font-family: 'Bungee', sans-serif;
@@ -18,38 +18,41 @@ nav {
 /* Style for the nav title ("Tweeter") */
 .nav-title {
   font-size: 2em;
-  position: relative; /* No absolute positioning needed */
+  margin: 0;
+  padding-bottom: 10px;
 }
 
 /* Style for the "Write a new tweet" section */
 .write-new-tweet {
+  display: flex; /* Flexbox for vertical alignment */
+  flex-direction: column; /* Stack text and icon vertically */
+  justify-content: center;;
+  align-items: center; /* Center text and icon horizontally */
   text-align: center;
   font-family: 'Source Sans 3', sans-serif;
   font-size: 1em;
-  display: flex; /* Flexbox for vertical alignment */
-  flex-direction: column; /* Stack text and icon vertically */
-  align-items: center; /* Center text and icon horizontally */
-  margin-right: 1.5em; /* Maintain spacing from the right edge */
+  /* margin-right: 1.5em; Maintain spacing from the right edge */
 }
 
 /* Style for the paragraph inside "Write a new tweet" */
 .write-new-tweet p {
   margin: 0;
   text-align: center;
+  font-size: 1em;
 }
 
 /* Style for the double-arrow icon */
 .write-new-tweet i {
-  font-size: 1.5em;
-  margin-top: 0.2em; /* Add slight spacing between text and icon */
-  color: red;
+  font-size: .8em;
+  margin-top: 5px; /* Add slight spacing between text and icon */
+  padding-bottom: 10px;
 }
 
 body {
-  background-color: #008c8c;
+  /* background-color: #008c8c;
   background-image: url("https://www.transparenttextures.com/patterns/assault.png");
   background-repeat: repeat;
-  background-size: auto;
+  background-size: auto; */
   color: #545149;
   background-color: cornsilk;
   font-size: 24px;
