@@ -26,9 +26,8 @@ nav {
 .write-new-tweet {
   display: flex; /* Flexbox for vertical alignment */
   flex-direction: column; /* Stack text and icon vertically */
-  justify-content: center;;
+  justify-content: center;
   align-items: center; /* Center text and icon horizontally */
-  text-align: center;
   font-family: 'Source Sans 3', sans-serif;
   font-size: 1em;
   /* margin-right: 1.5em; Maintain spacing from the right edge */

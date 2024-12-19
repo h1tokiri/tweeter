@@ -1,6 +1,6 @@
 /* Tweet container */
 .tweet-container {
-  margin: 20px auto;
+  /* margin: 20px auto; */
   padding: 10px;
   /* max-width: 600px; */
   background-color: cornsilk;
@@ -28,15 +28,15 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 10px;
+  /* margin-bottom: 10px; */
   background-color: cornsilk;
 }
 
 .tweet .user-info {
   display: flex;
-  align-items: center;
-  padding: 1em 0 0 1em;
-  position: absolute; /* Changed to absolute positioning */
+  /* align-items: center; */
+  /* padding: 1em 0 0 1em; */
+  position: absolute; /* Ensure absolute positioning */
   top: 0; /* Align to top */
   left: 0; /* Align to left */
 }
@@ -44,8 +44,10 @@
 .tweet .user-info img {
   width: 40px;
   height: 40px;
-  border-radius: 50%;
-  margin-right: .5em;
+  top: 0px;
+  left: 0px;
+  /* border-radius: 50%; */
+  /* margin-right: .5em; */
 }
 
 .tweet .user-info .name {
