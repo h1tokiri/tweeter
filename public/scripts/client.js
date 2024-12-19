@@ -59,10 +59,10 @@ $(document).ready(function () {
   const renderTweets = function(tweets) {
     // Clear the tweet container before appending new tweets
     $('.tweet-container').empty();
-    // Loop through tweets and append each one to the tweet container
+    // Loop through tweets and prepend each one to the tweet container
     for (const tweet of tweets) {
       const $tweet = createTweetElement(tweet);
-      $('.tweet-container').append($tweet);
+      $('.tweet-container').prepend($tweet);
     }
   };
 
