@@ -30,7 +30,7 @@ $(document).ready(function () {
     }
   ];
 
-  const createTweetElement = function(tweet) {
+  const createTweetElement = function (tweet) {
     const $tweet = $(`
       <article class="tweet">
         <header>
@@ -56,7 +56,7 @@ $(document).ready(function () {
     return $tweet;
   };
 
-  const renderTweets = function(tweets) {
+  const renderTweets = function (tweets) {
     // Clear the tweet container before appending new tweets
     $('.tweet-container').empty();
     // Loop through tweets and prepend each one to the tweet container
@@ -68,5 +68,28 @@ $(document).ready(function () {
 
   // Render the tweets
   renderTweets(data);
-});
 
+  // Add event listener for form submission
+  $('.new-tweet form').on('submit', function (event) {
+    event.preventDefault(); // Prevent the default form submission behavior
+
+    const serializedData = $(this).serialize(); // Serialize the form data
+
+    // Send the serialized data to the server using an AJAX POST request
+    $.ajax({
+      type: 'POST',
+      url: '/tweets',
+      data: serializedData,
+      success: function (response) {
+        console.log('Tweet submitted successfully:', response);
+        // Optionally, fetch and render the new list of tweets
+        // For now, we can just append the new tweet to the tweet container
+        const newTweet = createTweetElement(response);
+        $('.tweet-container').prepend(newTweet);
+      },
+      error: function (error) {
+        console.error('Error submitting tweet:', error);
+      }
+    });
+  });
+});
