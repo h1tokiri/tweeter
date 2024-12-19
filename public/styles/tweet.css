@@ -11,11 +11,12 @@
 /* individual tweet */
 .tweet {
   margin-bottom: 20px;
-  padding: 15px;
+  padding: 20px; /* Added padding for better spacing */
   background-color: cornsilk;
   border: 3px solid #333;
   /* border-radius: 8px; */
   position: relative; /* Added to position .user-info relative to .tweet */
+  transition: box-shadow 0.3s ease; /* Added transition for smoother hover effect */
 }
 
 .tweet:hover {
@@ -74,7 +75,7 @@
   line-height: 1.5;
   border-bottom: 3px solid #4d4d4d;
   display: flex; /* Added flexbox */
-  align-items: top; /* Center vertically */
+  align-items: center; /* Center vertically */
   height: 100px; /* Adjust height as needed */
 }
 
@@ -97,6 +98,7 @@
   margin-left: 10px;
   cursor: pointer;
   margin-bottom: 0;
+  transition: color 0.3s ease; /* Added transition for smoother hover effect */
 }
 
 .tweet footer .icons i:hover {
