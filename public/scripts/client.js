@@ -53,6 +53,8 @@ $(document).ready(function () {
         </footer>
       </article>
     `);
+    $tweet.find('.name').text(tweet.user.name);
+    $tweet.find('.tweet-content').text(tweet.content.text);
     return $tweet;
   };
 
@@ -79,32 +81,32 @@ $(document).ready(function () {
     $.ajax({
       type: 'POST',
       url: '/tweets',
-      data: serializedData,
-      success: function (response) {
+      data: serializedData
+    })
+      .done(function (response) {
         console.log('Tweet submitted successfully:', response);
-        // Optionally, fetch and render the new list of tweets
-        // For now, we can just append the new tweet to the tweet container
-        const newTweet = createTweetElement(response);
-        $('.tweet-container').prepend(newTweet);
-      },
-      error: function (error) {
+        // Refresh the list of tweets
+        loadTweets();
+        // Clear the form fields
+        $('.new-tweet form')[0].reset();
+      })
+      .fail(function (error) {
         console.error('Error submitting tweet:', error);
-      }
-    });
+      });
   });
 
   const loadTweets = function () {
     $.ajax({
       url: '/tweets',
       method: 'GET',
-      dataType: 'json',
-      success: function (tweets) {
+      dataType: 'json'
+    })
+      .done(function (tweets) {
         renderTweets(tweets);
-      },
-      error: function (error) {
+      })
+      .fail(function (error) {
         console.error('Error fetching tweets:', error);
-      }
-    });
+      });
   };
 
   loadTweets();
