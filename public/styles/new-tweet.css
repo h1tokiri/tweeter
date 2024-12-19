@@ -8,7 +8,7 @@
   /* padding: 20px; */
   /* background-color: #f4f4f4; */
   /* border-radius: 8px; */
-  width: 100%;
+  width: 95%;
   /* max-width: 600px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1); */
 }
@@ -24,7 +24,7 @@
 .new-tweet h3 {
   font-family: "Source Sans 3", sans-serif;
   font-size: 1em;
-  font-weight: lighter;
+  font-weight: bold;
   color: #333;
 }
 
@@ -105,5 +105,10 @@
   border-radius: 4px;
   font-family: "Source Sans 3", sans-serif;
   font-size: 14px;
-  display: none; /* Hide initially */
+  display: none;
+  /* Hide initially */
+  margin-top: 10px;
+  /* Add margin to give space from other elements */
 }
+
+margin-top: 10px;
