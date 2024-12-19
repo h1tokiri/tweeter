@@ -40,9 +40,7 @@ $(document).ready(function () {
           </figure>
           <span class="handle">${tweet.user.handle}</span>
         </header>
-        <p class="tweet-content">
-          ${tweet.content.text}
-        </p>
+        <p class="tweet-content"></p>
         <footer>
           <span class="timestamp">${timeago.format(tweet.created_at)}</span>
           <div class="icons">
@@ -74,6 +72,19 @@ $(document).ready(function () {
   // Add event listener for form submission
   $('.new-tweet form').on('submit', function (event) {
     event.preventDefault(); // Prevent the default form submission behavior
+
+    const tweetText = $('#tweet-text').val(); // Get the tweet text
+
+    // Validation checks
+    if (!tweetText) {
+      alert('Tweet content cannot be empty.');
+      return; // Prevent form submission
+    }
+
+    if (tweetText.length > 140) {
+      alert('Tweet content exceeds the 140 character limit.');
+      return; // Prevent form submission
+    }
 
     const serializedData = $(this).serialize(); // Serialize the form data
 
