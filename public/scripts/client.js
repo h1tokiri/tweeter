@@ -69,11 +69,11 @@ $(document).ready(function () {
   // Function to validate tweet text
   const isTweetValid = function (tweetText) {
     if (!tweetText) {
-      alert('Tweet content cannot be empty.');
+      $('.error-message').text('Tweet content cannot be empty.').slideDown();
       return false;
     }
     if (tweetText.length > 140) {
-      alert('Tweet content exceeds the 140 character limit.');
+      $('.error-message').text('Tweet content exceeds the 140 character limit.').slideDown();
       return false;
     }
     return true;
@@ -82,6 +82,9 @@ $(document).ready(function () {
   // Add event listener for form submission
   $('.new-tweet form').on('submit', function (event) {
     event.preventDefault(); // Prevent the default form submission behavior
+
+    // Hide the error message before validation
+    $('.error-message').slideUp();
 
     const tweetText = $('#tweet-text').val(); // Get the tweet text
 
